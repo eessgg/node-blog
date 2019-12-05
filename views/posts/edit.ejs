@@ -1,0 +1,19 @@
+<h1>edit</h1>
+<% if (locals.post) { %>
+  <div class="row">
+    <div class="col-md-6">
+      <form method="POST" action="/posts/<%= post.id %>?_method=PUT">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+          <label for="title"> <strong> Título do post </strong></label>
+          <input type="text" name="title" class="form-control" id="title" aria-describedby="Title" placeholder="Digite o Título do post" value="<%= post.title %>">
+        </div>
+        <div class="form-group">
+          <label for="textPost"> <strong> Texto do post </strong></label>
+          <textarea class="form-control" id="textPost" name="text" rows="3"><%= post.text %></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Confirmar alteração</button>
+      </form>
+    </div>
+  </div>
+<% } %>

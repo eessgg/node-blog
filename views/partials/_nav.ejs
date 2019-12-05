@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Meu Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <% if(user) { %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/posts">Meus Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/posts/add">Adicionar Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/user/logout">Logout</a>
+          </li>
+        </ul>
+      <% } else { %>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="/user/login" class="form-control mr-sm-2" aria-label="Login"> Login</a>
+          <a href="/user/register" class="form-control mr-sm-2" aria-label="Register"> Register</a>
+        </form>
+      <% } %>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1 class="display-5"> Register</h1>
+</div>
+
+<form action="/user/register" method="POST">
+  <div class="form-group">
+    <label for="name"><strong>User address:</strong></label>
+    <input type="text" class="form-control" id="name" name="name" value="<%= locals.name %>" required>
+  </div>
+   <div class="form-group">
+     <label for="email"><strong>Email address:</strong></label>
+     <input type="email" class="form-control" id="email" name="email" value="<%= locals.email %>">
+   </div>
+  <div class="form-group">
+    <label for="password"> <strong>Password:</strong></label>
+    <input type="password" class="form-control" id="password" name="password" value="<%= locals.password %>">
+  </div>
+   <div class="form-group">
+     <label for="password2"><strong>Check Password:</strong></label>
+     <input type="password" class="form-control" id="password2" name="password2" value="<%= locals.password2 %>" required>
+   </div>
+
+  <button type="submit" class="btn btn-primary">Registrar</button>
+</form>

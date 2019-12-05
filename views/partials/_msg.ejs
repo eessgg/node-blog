@@ -1,0 +1,18 @@
+
+<% if(locals.success_msg) { %>
+  <div class="alert alert-success alert-white rounded" role="alert">
+    <button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button>
+    <i class="fa fa-check"></i>
+    <strong>Success!</strong>
+     <%= success_msg %>
+  </div>
+<% } %>
+
+<% if(locals.error_msg) { %>
+  <div class="alert alert-danger alert-white rounded" role="alert">
+    <button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button>
+    <i class="fa fa-check"></i>
+    <strong>Erro!</strong>
+    <%= error_msg %>
+  </div>
+<% } %>
